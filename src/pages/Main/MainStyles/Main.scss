@@ -1,0 +1,14 @@
+.main {
+  width: 100vw;
+  background-color: rgb(192, 192, 192);
+  .mainNav {
+    height: 10vh;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .mainNavContents {
+      padding: 0 20px 0 20px;
+    }
+  }
+}

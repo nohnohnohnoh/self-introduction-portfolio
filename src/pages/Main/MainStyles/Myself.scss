@@ -1,0 +1,18 @@
+.mySelf {
+  height: 100vh;
+  background-image: linear-gradient(rgba(192, 192, 192), rgba(0, 0, 0, 0)),
+    url('../MainImages/1.png');
+  background-size: cover;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .mySelfHead {
+    font-size: 1.2rem;
+  }
+  .mySelfBox {
+    .mySelfBoxContents {
+    }
+  }
+}
