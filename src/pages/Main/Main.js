@@ -14,16 +14,16 @@ const Main = () => {
         <Link to="1" smooth="true" duration={200}>
           <li className="mainNavContents">Self-Introduction</li>
         </Link>
-        <Link to="2" smooth="true" duration={200}>
+        <Link to="2" smooth="true" duration={1000}>
           <li className="mainNavContents">Project</li>
         </Link>
-        <Link to="3" smooth="true" duration={200}>
+        <Link to="3" smooth="true" duration={1500}>
           <li className="mainNavContents">Stacks</li>
         </Link>
-        <Link to="4" smooth="true" duration={200}>
+        <Link to="4" smooth="true" duration={2000}>
           <li className="mainNavContents">About</li>
         </Link>
-        <Link to="5" smooth="true" duration={200}>
+        <Link to="5" smooth="true" duration={2500}>
           <li className="mainNavContents">Contact</li>
         </Link>
       </ul>
