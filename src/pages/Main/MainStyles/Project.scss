@@ -7,15 +7,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   .projectHead {
     .projectContent {
     }
   }
   .projectBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .projectOne {
+      .fruitImg {
+        width: 400px;
+        height: 300px;
+      }
     }
 
     .projectTwo {
+      .goCloudImg {
+        width: 400px;
+        height: 300px;
+      }
     }
   }
 }

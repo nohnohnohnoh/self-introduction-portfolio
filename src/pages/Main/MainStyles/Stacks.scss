@@ -1,7 +1,82 @@
 .stacks {
+  width: 100vw;
   height: 100vh;
   background-image: linear-gradient(rgba(192, 192, 192), rgba(0, 0, 0, 0)),
     url('../MainImages/3.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+
+  .stacksHead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    .stacksHeadLogo {
+      font-size: 50px;
+    }
+  }
+
+  .secondLine {
+    margin-top: -10px;
+  }
+  .lineBox {
+    display: flex;
+    hr {
+      width: 0px;
+      height: 100px;
+      border: 10px 0 10px 0;
+    }
+  }
+
+  .stacksContentsBox {
+    display: flex;
+    .javaScriptBox {
+      width: 20%;
+      display: flex;
+      justify-content: center;
+    }
+    .reactBox {
+      width: 20%;
+      display: flex;
+      justify-content: center;
+    }
+    .htmlBox {
+      width: 20%;
+      display: flex;
+      justify-content: center;
+    }
+    .gitBox {
+      width: 20%;
+      display: flex;
+      justify-content: center;
+    }
+    .taskBox {
+      width: 20%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .test {
+    display: flex;
+    .javaScriptContentsBox {
+      width: 20vw;
+      text-align: center;
+    }
+    .reactContentsBox {
+      width: 20vw;
+      text-align: center;
+    }
+    .htmlContentsBox {
+      width: 20vw;
+      text-align: center;
+    }
+    .gitContentsBox {
+      width: 20vw;
+      text-align: center;
+    }
+    .taskToolBox {
+      width: 20vw;
+      text-align: center;
+    }
+  }
 }

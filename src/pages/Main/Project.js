@@ -9,12 +9,20 @@ const Project = () => {
       </div>
       <div className="projectBox">
         <div className="projectOne">
+          <img
+            className="fruitImg"
+            src="/images/프룯츠.png"
+            alt="프룯츠 프로젝트"
+          />
           <div>프룯츠 Project</div>
-          <img src="/MainImages/프룯츠.png" />
         </div>
         <div className="projectTwo">
+          <img
+            className="goCloudImg"
+            src="/images/go-cloud.png"
+            alt="go-cloud"
+          />
           <div>Go-Cloud Project</div>
-          <img src="" />
         </div>
       </div>
     </div>
