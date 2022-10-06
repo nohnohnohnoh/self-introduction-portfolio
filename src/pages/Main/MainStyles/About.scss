@@ -1,6 +1,45 @@
 .about {
+  width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(rgba(192, 192, 192), rgba(0, 0, 0, 0)),
-    url('../MainImages/4.jpg');
+  background: url('../MainImages/4.jpg') no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .aboutHead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .aboutHeadLogo {
+      font-size: 50px;
+      margin: 10px 0 10px 0;
+    }
+
+    .aboutHeadText {
+      font-size: 25px;
+      margin: 10px 0 10px 0;
+    }
+  }
+  .aboutBox {
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .wecodeBox {
+      .wecodeImg {
+        width: 200px;
+        height: 150px;
+      }
+    }
+
+    .interShipBox {
+      .interShipImg {
+        width: 200px;
+        height: 150px;
+      }
+    }
+  }
 }

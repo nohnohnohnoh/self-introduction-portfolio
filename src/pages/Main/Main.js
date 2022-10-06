@@ -14,6 +14,9 @@ const Main = () => {
         <Link to="1" smooth="true" duration={200}>
           <li className="mainNavContents">Self-Introduction</li>
         </Link>
+
+        <div className="image1"></div>
+
         <Link to="2" smooth="true" duration={1000}>
           <li className="mainNavContents">Project</li>
         </Link>

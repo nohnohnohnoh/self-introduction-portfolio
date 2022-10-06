@@ -4,6 +4,7 @@ import './MainStyles/Myself.scss'
 const MySelf = () => {
   return (
     <div className="mySelf">
+      <div>01. Self-Introduction</div>
       <div className="mySelfHead">Front-End 개발자 노영완입니다.</div>
       <ul className="mySelfBox">
         <li className="mySelfBoxContents">
