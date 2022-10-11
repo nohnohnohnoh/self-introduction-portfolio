@@ -1,33 +1,35 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import '../MainModal/InterShipModal.scss'
 
-const InterShipModal = () => {
+const InterShipModal = ({ handleModal, offInterShipModal }) => {
+  const [animate, setAnimate] = useState(false)
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    if (visible && !handleModal) {
+      setAnimate(true)
+      setTimeout(() => setAnimate(false), 250)
+    }
+    setAnimate(handleModal)
+  }, [visible, handleModal])
+
+  if (!animate && !visible) return null
   return (
-    <div className="backGround">
-      <div className="InterShipModal">
-        <div className="headBox">
-          <div>머치스퀘어</div>
-          <div>2022.04.25 ~ 2022.05.20</div>
-          <div>업무 내용 : InterShip 기간동안 COJAM NFT 사이트 리팩토링</div>
-        </div>
-        <ul>
-          <li>
-            sass, 변수통일에 대한 리팩토링 과 sass mixin을 통한 반응형 웹
-            리팩토링을 진행
-          </li>
-          <li>
-            axios를 걷어내고 ReactQuery에 대한 customhook을 만들어
-            useReactQuery로 가독성을 높인 리팩토링을 진행
-          </li>
-          <li>
-            ReactInfiniteQuery, Intersection Observer 라이브러리를 통해 무한
-            스크롤을 구현해 결과물의 완성도를 높임
-          </li>
-          <li>
-            ReactQuery로 리팩토링 작업이 진행되는 중 queryket에 대해 error가
-            나는 부분 핸들링 작업을 완료
-          </li>
-        </ul>
-      </div>
+    <div className={handleModal ? 'modal open' : 'modal close'}>
+      <section>
+        <header>
+          <div>안녕하헤요</div>
+          <button className="close" onClick={offInterShipModal}>
+            &times;
+          </button>
+        </header>
+        <main>안녕</main>
+        <footer>
+          <button className="close" onClick={offInterShipModal}>
+            close
+          </button>
+        </footer>
+      </section>
     </div>
   )
 }

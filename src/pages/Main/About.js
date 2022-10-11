@@ -5,8 +5,14 @@ import InterShipModal from './MainModal/InterShipModal'
 const About = () => {
   const [handleModal, setHandleMdoal] = useState(false)
 
-  const interShipModalClick = () => {
+  const onInterShipModal = () => {
     setHandleMdoal(true)
+    console.log(handleModal)
+  }
+
+  const offInterShipModal = () => {
+    setHandleMdoal(false)
+    console.log(handleModal)
   }
 
   return (
@@ -26,10 +32,13 @@ const About = () => {
         <div className="interShipBox">
           <img className="interShipImg" src="/images/머치스퀘어.png" />
           <div>InterShip</div>
-          <div onClick={interShipModalClick}>자세히 보기</div>
+          <div onClick={onInterShipModal}>자세히 보기</div>
         </div>
       </div>
-      <InterShipModal />
+      <InterShipModal
+        handleModal={handleModal}
+        offInterShipModal={offInterShipModal}
+      />
     </div>
   )
 }
