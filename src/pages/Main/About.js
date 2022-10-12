@@ -3,15 +3,15 @@ import './MainStyles/About.scss'
 import InterShipModal from './MainModal/InterShipModal'
 
 const About = () => {
-  const [handleModal, setHandleMdoal] = useState(false)
+  const [handleModal, setHandleModal] = useState(false)
 
   const onInterShipModal = () => {
-    setHandleMdoal(true)
+    setHandleModal(true)
     console.log(handleModal)
   }
 
   const offInterShipModal = () => {
-    setHandleMdoal(false)
+    setHandleModal(false)
     console.log(handleModal)
   }
 
@@ -35,10 +35,12 @@ const About = () => {
           <div onClick={onInterShipModal}>자세히 보기</div>
         </div>
       </div>
-      <InterShipModal
-        handleModal={handleModal}
-        offInterShipModal={offInterShipModal}
-      />
+      {handleModal && (
+        <InterShipModal
+          handleModal={handleModal}
+          offInterShipModal={offInterShipModal}
+        />
+      )}
     </div>
   )
 }
