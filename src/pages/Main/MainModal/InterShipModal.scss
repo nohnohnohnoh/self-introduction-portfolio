@@ -1,0 +1,110 @@
+@mixin modalSetting($visible: true) {
+  @if $visible {
+    animation: slideUp 0.25s ease-out forwards;
+  } @else {
+    animation: slideDown 0.25s ease-out forwards;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: modal-bg-show;
+  .offClick {
+    font-size: 2rem;
+    text-align: right;
+  }
+  .modalOpen {
+    width: 80%;
+    height: 90%;
+    background-color: #fff;
+    @include modalSetting($visible: true);
+    padding: 16px;
+    border-radius: 0.8rem;
+  }
+
+  .modalClose {
+    @include modalSetting;
+  }
+  .modalHeader {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .logoImg {
+    width: 5rem;
+    height: 5rem;
+  }
+  .headerContentBox {
+    display: flex;
+    .headerContent {
+      font-size: 1.125rem;
+      margin: 0.5rem 0 0 0.5rem;
+      .headerContentList {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  .listTwoHeader {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    color: #0000ff;
+  }
+  .listThreeHeader {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    color: #0000ff;
+  }
+  .listOne {
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+  .listTwo {
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+  .listThree {
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+@keyframes modal-bg-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}

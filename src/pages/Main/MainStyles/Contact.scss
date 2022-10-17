@@ -1,15 +1,13 @@
-.mySelf {
-  width: 100vw;
+.contact {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  .mySelfHead {
-    font-size: 1.2rem;
-  }
-  .mySelfBox {
-    .mySelfBoxContents {
+  .contactBox {
+    display: flex;
+    align-items: center;
+    .contactContent {
     }
   }
 }

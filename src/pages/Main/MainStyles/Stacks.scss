@@ -1,11 +1,6 @@
 .stacks {
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(rgba(192, 192, 192), rgba(0, 0, 0, 0)),
-    url('../MainImages/3.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-
   .stacksHead {
     display: flex;
     justify-content: center;

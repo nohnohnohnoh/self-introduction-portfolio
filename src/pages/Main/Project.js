@@ -14,7 +14,7 @@ const Project = () => {
             src="/images/프룯츠.png"
             alt="프룯츠 프로젝트"
           />
-          <div>프룯츠 Project</div>
+          <div>Fruits Project</div>
         </div>
         <div className="projectTwo">
           <img
@@ -25,6 +25,7 @@ const Project = () => {
           <div>Go-Cloud Project</div>
         </div>
       </div>
+      <div>Project 자세히보기</div>
     </div>
   )
 }
