@@ -25,6 +25,7 @@ const Project = () => {
           <div>Go-Cloud Project</div>
         </div>
       </div>
+      <div>Project 자세히보기</div>
     </div>
   )
 }

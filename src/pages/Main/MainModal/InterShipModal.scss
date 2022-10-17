@@ -18,21 +18,64 @@
   justify-content: center;
   align-items: center;
   animation-name: modal-bg-show;
+  .offClick {
+    font-size: 2rem;
+    text-align: right;
+  }
   .modalOpen {
     width: 80%;
     height: 90%;
     background-color: #fff;
     @include modalSetting($visible: true);
     padding: 16px;
+    border-radius: 0.8rem;
   }
+
   .modalClose {
     @include modalSetting;
   }
   .modalHeader {
+    text-align: center;
+    font-size: 2rem;
   }
   .logoImg {
-    width: 10%;
-    height: 10%;
+    width: 5rem;
+    height: 5rem;
+  }
+  .headerContentBox {
+    display: flex;
+    .headerContent {
+      font-size: 1.125rem;
+      margin: 0.5rem 0 0 0.5rem;
+      .headerContentList {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  .listTwoHeader {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    color: #0000ff;
+  }
+  .listThreeHeader {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    color: #0000ff;
+  }
+  .listOne {
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+  .listTwo {
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+  .listThree {
+    li {
+      margin-bottom: 0.5rem;
+    }
   }
 }
 

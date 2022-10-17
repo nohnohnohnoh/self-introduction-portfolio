@@ -10,14 +10,21 @@ const InterShipModal = ({ handleModal, offInterShipModal }) => {
             X
           </div>
           <header className="modalHeader">InterShip</header>
-          <img className="logoImg" src="/images/머치스퀘어.png" />
-          <img src="" />
-          <div className="headerContent">
-            <div>회사이름 : 머치스퀘어</div>
-            <div>기간 : 2022.04.25 ~ 2022.05.20</div>
-            <div>업무내용 : InterShip COJAM NFT 사이트 리팩토링</div>
+          <div className="headerContentBox">
+            <img className="logoImg" src="/images/머치스퀘어.png" />
+            <img src="" />
+            <div className="headerContent">
+              <div className="headerContentList">회사이름 : 머치스퀘어</div>
+              <div className="headerContentList">
+                기간 : 2022.04.25 ~ 2022.05.20
+              </div>
+              <div className="headerContentList">
+                업무내용 : InterShip COJAM NFT 사이트 리팩토링
+              </div>
+            </div>
           </div>
-          <ul>
+          <hr />
+          <ul className="listOne">
             <li>
               sass, 변수통일에 대한 리팩토링 과 sass mixin을 통한 반응형 웹
               리팩토링을 진행.
@@ -35,8 +42,9 @@ const InterShipModal = ({ handleModal, offInterShipModal }) => {
               나는 부분 핸들링 작업을 완료.
             </li>
           </ul>
-          <header>InterShip 작업 중 느낀 점</header>
-          <ul>
+          <hr />
+          <header className="listTwoHeader">InterShip 작업 중 느낀 점</header>
+          <ul className="listTwo">
             <li>
               프로젝트를 진행하기 전에 통일할 부분을 미리 맞추어 진행해야겠다고
               느낌.
@@ -57,8 +65,11 @@ const InterShipModal = ({ handleModal, offInterShipModal }) => {
               리팩토링 작업이 정말 큰 작업이라는 걸 느낌.
             </li>
           </ul>
-          <header>느낀 점을 토대로 바뀌어야 하는 개발 자세</header>
-          <ul>
+          <hr />
+          <header className="listThreeHeader">
+            느낀 점을 토대로 바뀌어야 하는 개발 자세
+          </header>
+          <ul className="listThree">
             <li>
               div를 무작정 치는 것이 아닌 semantic tag를 씀으로써 유지보수성이
               좋고 가독성이 좋은 코드.
