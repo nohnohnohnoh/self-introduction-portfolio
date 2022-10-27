@@ -8,7 +8,7 @@ const Project = () => {
       <div className="projectHead">
         <header className="projectHeadContent">02. Project</header>
       </div>
-      <div className="projectBox">
+      {/* <div className="projectBox">
         <div className="fruitsBox">
           <div className="fruitsContent">
             <div className="fruitsFront">
@@ -17,14 +17,15 @@ const Project = () => {
                 src="/images/프룯츠.png"
                 alt="프룯츠 프로젝트"
               />
-              <header className="friutsHeader">Fruits Project</header>
-              <div>
-                과채, 과채주스, Gift등의 정보를 제공 및 판매하는 사이트.
-              </div>
-              <div>
-                Frits 커피사이트를 모티브로 진행하였습니다. 2주간의 프로젝트이며
-                Scrum 방식으로 개발주기는 한 주로 Sprint로 진행하였습니다.
-              </div>
+              <header className="fruitsHeader">Fruits Project</header>
+              <ul className="fruitsSection">
+                <li className="fruitsSectionContent">
+                  과채, 과채주스, Gift등의 정보를 제공 및 판매하는 사이트.
+                </li>
+                <li className="fruitsSectionContent">
+                  Frits 커피사이트를 모티브로 진행하였습니다.
+                </li>
+              </ul>
             </div>
             <div className="fruitsBack">
               <ul>
@@ -69,10 +70,10 @@ const Project = () => {
               <div>안녕하세요</div>
               <div>안녕하세요</div>
               <div>안녕하세요</div>
-            </div>
-          </div>
-        </div>
-      </div>
+            </div> */}
+      {/* </div> */}
+      {/* </div> */}
+      {/* </div> */}
 
       <div>Project 자세히보기</div>
     </div>

@@ -17,7 +17,7 @@ const About = () => {
 
   return (
     <div className="about">
-      <div className="aboutHead">
+      {/* <div className="aboutHead">
         <div className="aboutHeadLogo">04. About</div>
         <div className="aboutHeadText">Wecode bootCamp 수료 했습니다.</div>
         <div className="aboutHeadText">
@@ -40,7 +40,7 @@ const About = () => {
           handleModal={handleModal}
           offInterShipModal={offInterShipModal}
         />
-      )}
+      )} */}
     </div>
   )
 }
