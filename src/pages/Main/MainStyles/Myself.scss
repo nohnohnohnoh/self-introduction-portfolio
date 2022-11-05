@@ -6,10 +6,13 @@
   align-items: center;
   flex-direction: column;
   .mySelfHead {
-    font-size: 1.2rem;
+    width: 50vw;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
   }
-  .mySelfBox {
-    .mySelfBoxContents {
-    }
+  .typingContent {
+    font-weight: bold;
+    text-align: center;
   }
 }

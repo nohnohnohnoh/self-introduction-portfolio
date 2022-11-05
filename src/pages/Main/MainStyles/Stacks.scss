@@ -1,77 +1,76 @@
 .stacks {
   width: 100vw;
   height: 100vh;
-  .stacksHead {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    .stacksHeadLogo {
-      font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bar-container {
+  h2 {
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    width: 100%;
+  }
+  position: relative;
+  height: 100%;
+  flex: 0 0 30%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // **** CSS progress bar ****
+  ul {
+    position: relative;
+    padding: 0;
+    list-style: none;
+    width: 150px;
+    li {
+      background-color: #fff;
+      height: 20px;
+      border-radius: 10px;
+      .bar {
+        position: absolute;
+        border-radius: 10px;
+        background-color: #35495e;
+        height: 20px;
+        &:after {
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          content: '';
+          width: 27px;
+          height: 27px;
+          position: absolute;
+          top: -3px;
+          right: 0;
+          border-radius: 50%;
+          background-color: #607d8b;
+        }
+      }
+      .css-progressbar {
+        width: 80%;
+        animation: css-progressbar 2s infinite;
+        // -webkit-animation: css-progressbar 2s ease-out;
+      }
     }
   }
-
-  .secondLine {
-    margin-top: -10px;
-  }
-  .lineBox {
-    display: flex;
-    hr {
+  @keyframes css-progressbar {
+    0% {
       width: 0px;
-      height: 100px;
-      border: 10px 0 10px 0;
+    }
+    100% {
+      width: 80%;
     }
   }
 
-  .stacksContentsBox {
-    display: flex;
-    .javaScriptBox {
-      width: 20%;
-      display: flex;
-      justify-content: center;
+  @-moz-keyframes css-progressbar {
+    0% {
+      width: 0px;
     }
-    .reactBox {
-      width: 20%;
-      display: flex;
-      justify-content: center;
-    }
-    .htmlBox {
-      width: 20%;
-      display: flex;
-      justify-content: center;
-    }
-    .gitBox {
-      width: 20%;
-      display: flex;
-      justify-content: center;
-    }
-    .taskBox {
-      width: 20%;
-      display: flex;
-      justify-content: center;
-    }
-  }
-  .test {
-    display: flex;
-    .javaScriptContentsBox {
-      width: 20vw;
-      text-align: center;
-    }
-    .reactContentsBox {
-      width: 20vw;
-      text-align: center;
-    }
-    .htmlContentsBox {
-      width: 20vw;
-      text-align: center;
-    }
-    .gitContentsBox {
-      width: 20vw;
-      text-align: center;
-    }
-    .taskToolBox {
-      width: 20vw;
-      text-align: center;
+    100% {
+      width: 80%;
     }
   }
 }

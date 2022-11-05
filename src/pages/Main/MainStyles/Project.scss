@@ -1,110 +1,254 @@
 .project {
+  width: 100%;
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(192, 192, 192)),
-    url('../MainImages/2.jpg');
+    url('../MainImages/desert.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  .projectHead {
-    .projectContent {
-    }
+  .center {
+    width: 30%;
+    position: relative;
   }
-  .projectBox {
+  .swiper {
+    width: 100%;
+  }
+  .prev {
+    position: absolute;
+    top: 50%;
+    left: -15%;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+    margin-top: 0px;
+  }
+  .next {
+    margin-top: 0px;
+    position: absolute;
+    top: 50%;
+    right: -15%; // 대형노트북은 -14
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+  }
+  .swiper-pagination {
+    position: absolute;
+    top: 10%;
+    right: -20%;
+    width: auto !important;
+    left: auto !important;
+    margin: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    .fruitsBox {
-      width: 370px;
-      height: 60vh;
-      margin: 0 auto 15px 10px;
-      position: relative;
-      transition: 1.5s;
-      transform-style: preserve-3d; //이게 돌리기는데 핵심
-      &:hover {
+    flex-direction: column;
+  }
+  .swiper-pagination-bullet {
+    padding: 5px 10px;
+    border-radius: 0;
+    width: auto;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    background: none;
+  }
+  .swiper-pagination-bullet-active {
+    color: black;
+  }
+  .card,
+  .wrap {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    border-radius: 12px;
+  }
+  .wrap {
+    transition: 1.5s;
+    transform-style: preserve-3d; //카드 뒤집기 핵심
+  }
+  .card {
+    &:hover {
+      .wrap {
         transform: rotateY(180deg);
-      }
-      .fruitsContent {
-        width: 100%;
-        height: 100%;
-        border-radius: 20px;
-        transition: 1.5s;
-        transform-style: preserve-3d;
-        .fruitsBack,
-        .fruitsFront {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          border-radius: 20px;
-          overflow: hidden;
-          -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-          box-shadow: 0 4px 5px -2px rgb(0 0 0 / 20%),
-            0 7px 10px 1px rgb(0 0 0 / 14%), 0 2px 16px 1px rgb(0 0 0 / 12%);
-          background-color: #fff;
-        }
-
-        .fruitsBack {
-          transform: rotateY(180deg);
-          align-items: center;
-          justify-content: center;
-          background-color: #fff;
-        }
-        .fruitsImg {
-          width: 100%;
-          height: 30%;
-          border-radius: 0.8rem;
-        }
       }
     }
-
-    .goCloudBox {
-      width: 370px;
-      height: 60vh;
-      margin: 0 auto 15px 10px;
-      position: relative;
-      transition: 1.5s;
-      transform-style: preserve-3d; //이게 돌리기는데 핵심
-      &:hover {
-        transform: rotateY(180deg);
+  }
+  .back,
+  .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: 0 50%;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .front {
+    z-index: 1;
+    .fruitsImg {
+      width: 100%;
+      height: 30%;
+      border-radius: 20px;
+    }
+    .goCloudImg {
+      width: 100%;
+      height: 30%;
+      border-radius: 20px;
+    }
+    .projectHeader {
+      margin-top: 5%;
+      font-size: 1.5rem;
+    }
+    .projectSection {
+      margin-top: 1rem;
+      font-family: none;
+      .projectSectionContent {
+        font-weight: bold;
       }
-      .goCloudContent {
-        width: 100%;
-        height: 100%;
-        border-radius: 20px;
-        transition: 1.5s;
-        transform-style: preserve-3d;
-        .goCloudFront,
-        .goCloudBack {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          border-radius: 20px;
-          overflow: hidden;
-          -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-          box-shadow: 0 4px 5px -2px rgb(0 0 0 / 20%),
-            0 7px 10px 1px rgb(0 0 0 / 14%), 0 2px 16px 1px rgb(0 0 0 / 12%);
-          background-color: #fff;
+    }
+    .toolSection {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20%;
+      .technology {
+        .html {
+          font-size: 1.8rem;
+          color: red;
         }
-        .goCloudBack {
-          transform: rotateY(180deg);
-          align-items: center;
-          justify-content: center;
-          background-color: #fff;
+        .css {
+          font-size: 1.8rem;
+          color: blue;
         }
-        .goCloudImg {
-          width: 100%;
-          height: 30%;
-          border-radius: 0.8rem;
+        .javaScript {
+          font-size: 1.8rem;
+          color: green;
+        }
+        .react {
+          font-size: 1.8rem;
+          color: skyblue;
+        }
+        .styledComponents {
+          font-size: 1.8rem;
+          color: pink;
+        }
+      }
+
+      .taskTool {
+        .taskToolSection {
+          display: flex;
+          margin-top: 0.5rem;
+          .trello {
+            font-family: none;
+            font-weight: bold;
+          }
+          .slack {
+            font-family: none;
+            font-weight: bold;
+            padding: 0 0.5rem 0 0.5rem;
+          }
+          .notion {
+            font-family: none;
+            font-weight: bold;
+          }
         }
       }
     }
   }
+  .back {
+    transform: rotateY(180deg) translate(-50%, -50%);
+    font-weight: bold;
+    text-align: start;
+    .projectBackSection {
+      padding: 5%;
+      .firstHeader {
+        font-size: 1.2rem;
+      }
+      .fristSection {
+        line-height: 1.2;
+        font-family: none;
+        font-weight: bold;
+      }
+      .secondHeader {
+        margin-top: 2%;
+        font-size: 1.2rem;
+      }
+      .secondSection {
+        line-height: 1.2;
+        font-family: none;
+        font-weight: bold;
+      }
+    }
+  }
+  .link {
+    width: 100%;
+    height: 5vh;
+    border-radius: 12px;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    a {
+      color: black;
+      text-decoration: none;
+    }
+    .githubBox {
+      width: 35%;
+      height: 90%;
+      .github {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .notionBox {
+      width: 30%;
+      height: 80%;
+      .notion {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .desktopBox {
+      width: 35%;
+      height: 90%;
+      .desktop {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .active {
+      width: 100%;
+      height: 60%;
+      color: skyblue;
+    }
+    .activeGitHub {
+      text-align: center;
+      font-family: none;
+      font-weight: bold;
+      color: skyblue;
+    }
+    .activeNotion {
+      text-align: center;
+      font-family: none;
+      font-weight: bold;
+      color: skyblue;
+    }
+    .activeDesktop {
+      text-align: center;
+      font-family: none;
+      font-weight: bold;
+      color: skyblue;
+    }
+  }
+  // a:link {
+  //   text-decoration: none;
+  // }
 }

@@ -1,5 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-scroll/modules'
+import { ScrollingProvider, Section } from 'react-scroll-section'
+import SectionContainer from './SectionContainer'
+import { Menu, Item } from './Menu'
 import Contact from './Contact'
 import MySelf from './Myself'
 import Project from './Project'
@@ -11,23 +14,51 @@ const Main = () => {
   return (
     <main className="main">
       <ul className="mainNav">
-        <Link to="1" smooth="true" duration={200}>
-          <li className="mainNavContents">Self-Introduction</li>
+        <Link
+          className="mainNavContents"
+          spy={true}
+          to="1"
+          smooth="true"
+          duration={200}
+        >
+          <li>Self-Introduction</li>
         </Link>
 
-        <div className="image1"></div>
-
-        <Link to="2" smooth="true" duration={1000}>
-          <li className="mainNavContents">Project</li>
+        <Link
+          className="mainNavContents"
+          spy={true}
+          to="2"
+          smooth="true"
+          duration={1000}
+        >
+          <li>Project</li>
         </Link>
-        <Link to="3" smooth="true" duration={1500}>
-          <li className="mainNavContents">Stacks</li>
+        <Link
+          className="mainNavContents"
+          spy={true}
+          to="3"
+          smooth="true"
+          duration={1500}
+        >
+          <li>Stacks</li>
         </Link>
-        <Link to="4" smooth="true" duration={2000}>
-          <li className="mainNavContents">About</li>
+        <Link
+          className="mainNavContents"
+          spy={true}
+          to="4"
+          smooth="true"
+          duration={2000}
+        >
+          <li>About</li>
         </Link>
-        <Link to="5" smooth="true" duration={2500}>
-          <li className="mainNavContents">Contact</li>
+        <Link
+          className="mainNavContents"
+          spy={true}
+          to="5"
+          smooth="true"
+          duration={2500}
+        >
+          <li>Contact</li>
         </Link>
       </ul>
       <div id="1">
