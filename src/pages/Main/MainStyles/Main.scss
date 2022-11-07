@@ -22,10 +22,14 @@
     justify-content: center;
     position: fixed;
     top: 0;
+    z-index: 100;
 
     .mainNavContents {
-      color: black;
+      // color: black;
       padding: 0 20px 0 20px;
+      .test {
+        color: black;
+      }
     }
   }
   .active {

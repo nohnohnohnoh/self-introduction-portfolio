@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-scroll/modules'
-import { ScrollingProvider, Section } from 'react-scroll-section'
-import SectionContainer from './SectionContainer'
-import { Menu, Item } from './Menu'
+import * as Scroll from 'react-scroll'
 import Contact from './Contact'
 import MySelf from './Myself'
 import Project from './Project'
@@ -11,6 +8,9 @@ import About from './About'
 import './MainStyles/Main.scss'
 
 const Main = () => {
+  let Link = Scroll.Link
+  let Element = Scroll.Element
+
   return (
     <main className="main">
       <ul className="mainNav">
@@ -61,21 +61,21 @@ const Main = () => {
           <li>Contact</li>
         </Link>
       </ul>
-      <div id="1">
+      <Element id="1">
         <MySelf />
-      </div>
-      <div id="2">
+      </Element>
+      <Element id="2">
         <Project />
-      </div>
-      <div id="3">
+      </Element>
+      <Element id="3">
         <Stacks />
-      </div>
-      <div id="4">
+      </Element>
+      <Element id="4">
         <About />
-      </div>
-      <div id="5">
+      </Element>
+      <Element id="5">
         <Contact />
-      </div>
+      </Element>
     </main>
   )
 }

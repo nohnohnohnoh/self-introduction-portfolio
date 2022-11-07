@@ -84,7 +84,7 @@ const Project = () => {
                 onMouseLeave={notionMouseLeave}
                 className="notionBox"
               >
-                <a href="">
+                <a href="https://www.notion.so/dff3b913ac5745208ebf1022ce185703">
                   <SiNotion className={notionMouseOn ? 'active' : 'notion'} />
                   <div className="activeNotion">
                     {notionMouseOn && <div>Notion</div>}
@@ -127,7 +127,7 @@ const Project = () => {
                 onMouseLeave={notionMouseLeave}
                 className="notionBox"
               >
-                <a>
+                <a href="https://www.notion.so/dff3b913ac5745208ebf1022ce185703">
                   <SiNotion className={notionMouseOn ? 'active' : 'notion'} />
                   <div className="activeNotion">
                     {notionMouseOn && <div>Notion</div>}
