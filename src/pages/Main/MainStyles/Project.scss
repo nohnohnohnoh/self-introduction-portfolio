@@ -1,3 +1,4 @@
+@import '../../../styles/mixin.scss';
 .project {
   width: 100%;
   height: 100vh;
@@ -11,6 +12,27 @@
   .center {
     width: 30%;
     position: relative;
+    @include mobile {
+      width: 70%;
+    }
+    @media (min-width: 600px) and (max-width: 767px) {
+      width: 60%;
+    }
+    @include tablet {
+      width: 50%;
+    }
+    @media (min-width: 860px) and (max-width: 991px) {
+      width: 40%;
+    }
+    @include desktop {
+      width: 40%;
+    }
+    @media (min-width: 1200px) and (max-width: 1279px) {
+      width: 35%;
+    }
+    @include huge {
+      width: 30%;
+    }
   }
   .swiper {
     width: 100%;
@@ -19,8 +41,8 @@
     position: absolute;
     top: 50%;
     left: -15%;
-    width: 30px;
-    height: 30px;
+    width: 8%;
+    height: 8%;
     transform: translateY(-50%);
     margin-top: 0px;
   }
@@ -29,8 +51,8 @@
     position: absolute;
     top: 50%;
     right: -15%; // 대형노트북은 -14
-    width: 30px;
-    height: 30px;
+    width: 8%;
+    height: 8%;
     transform: translateY(-50%);
   }
   .swiper-pagination {
@@ -50,8 +72,19 @@
     height: 30px;
     text-align: center;
     line-height: 30px;
-    font-size: 12px;
     background: none;
+    @include mobile {
+      font-size: 0.8rem;
+    }
+    @include tablet {
+      font-size: 0.9rem;
+    }
+    @include desktop {
+      font-size: 0.95rem;
+    }
+    @include huge {
+      font-size: 1rem;
+    }
   }
   .swiper-pagination-bullet-active {
     color: black;
@@ -109,6 +142,15 @@
     .projectSection {
       margin-top: 1rem;
       font-family: none;
+      @include mobile {
+        font-size: 0.9rem;
+      }
+      @media (min-width: 600px) and (max-width: 767px) {
+        font-size: 0.8rem;
+      }
+      @media (min-width: 860px) and (max-width: 991px) {
+        font-size: 0.9rem;
+      }
       .projectSectionContent {
         font-weight: bold;
       }

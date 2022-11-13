@@ -1,3 +1,4 @@
+@import '../../../styles/mixin.scss';
 .contact {
   height: 100vh;
   display: flex;
@@ -8,8 +9,18 @@
     display: flex;
     align-items: center;
     .contactContent {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       line-height: 2;
+      @include mobile {
+        font-size: 1rem;
+      }
+      @include desktop {
+        font-size: 1.3rem;
+      }
+      @include huge {
+        font-size: 1.5rem;
+      }
+
       a {
         text-decoration: none;
         color: black;

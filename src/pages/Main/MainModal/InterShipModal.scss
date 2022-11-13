@@ -1,3 +1,4 @@
+@import '../../../styles/mixin.scss';
 @mixin modalSetting($visible: true) {
   @if $visible {
     animation: slideUp 0.25s ease-out forwards;
@@ -85,6 +86,89 @@
     font-weight: bold;
     li {
       margin-bottom: 0.5rem;
+    }
+  }
+  @include mobile {
+    .modalHeader {
+      font-size: 1.5rem;
+    }
+    .headerContentBox {
+      .headerContent {
+        font-size: 0.75rem;
+      }
+    }
+    .listOneHeader,
+    .listTwoHeader,
+    .listThreeHeader {
+      font-size: 1.1rem;
+    }
+    .listOne,
+    .listTwo,
+    .listThree {
+      font-size: 0.75rem;
+    }
+  }
+  @include tablet {
+    .modalHeader {
+      font-size: 2rem;
+    }
+    .headerContentBox {
+      .headerContent {
+        font-size: 0.85rem;
+      }
+    }
+    .listOneHeader,
+    .listTwoHeader,
+    .listThreeHeader {
+      font-size: 1.2rem;
+    }
+    .listOne,
+    .listTwo,
+    .listThree {
+      font-size: 0.85rem;
+    }
+  }
+  @include desktop {
+    .modalHeader {
+      font-size: 2.5rem;
+    }
+    .headerContentBox {
+      .headerContent {
+        font-size: 0.95rem;
+      }
+    }
+    .listOneHeader,
+    .listTwoHeader,
+    .listThreeHeader {
+      font-size: 1.4rem;
+    }
+    .listOne,
+    .listTwo,
+    .listThree {
+      font-size: 0.95rem;
+    }
+  }
+  @include huge {
+    .modalOpen {
+      height: 80%;
+    }
+    .modalHeader {
+      font-size: 3rem;
+    }
+    .headerContentBox {
+      .headerContent {
+        font-size: 1.1rem;
+      }
+    }
+    .listOneHeader,
+    .listTwoHeader,
+    .listThreeHeader {
+      font-size: 1.5rem;
+    }
+    .listOne,
+    .listTwo,
+    .listThree {
+      font-size: 1rem;
     }
   }
 }

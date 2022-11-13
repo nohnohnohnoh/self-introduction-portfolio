@@ -14,7 +14,6 @@ const MySelf = () => {
             wrapper="div"
             cursor={false}
             repeat={0}
-            style={{ fontSize: '1.5rem' }}
           />
           <TypeAnimation
             sequence={[
@@ -27,7 +26,6 @@ const MySelf = () => {
             wrapper="div"
             cursor={false}
             repeat={0}
-            style={{ fontSize: '1.5rem' }}
           />
           <TypeAnimation
             sequence={[
@@ -40,7 +38,6 @@ const MySelf = () => {
             wrapper="div"
             cursor={false}
             repeat={0}
-            style={{ fontSize: '1.5rem' }}
           />
           <TypeAnimation
             sequence={[
@@ -53,7 +50,6 @@ const MySelf = () => {
             wrapper="div"
             cursor={false}
             repeat={0}
-            style={{ fontSize: '1.5rem' }}
           />
         </div>
       </div>

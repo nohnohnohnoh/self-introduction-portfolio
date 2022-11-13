@@ -1,3 +1,5 @@
+@import '../../../styles/mixin.scss';
+
 .mySelf {
   width: 100vw;
   height: 100vh;
@@ -5,14 +7,21 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  .mySelfHead {
-    width: 50vw;
-    text-align: center;
-    padding: 2rem;
-    font-size: 2rem;
-  }
   .typingContent {
     font-weight: bold;
     text-align: center;
+    font-size: 1.5rem;
+    @include mobile {
+      font-size: 0.87rem;
+    }
+    @include tablet {
+      font-size: 1.1rem;
+    }
+    @include desktop {
+      font-size: 1.3rem;
+    }
+    @include huge {
+      font-size: 1.7rem;
+    }
   }
 }

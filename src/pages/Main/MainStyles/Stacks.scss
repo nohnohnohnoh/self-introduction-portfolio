@@ -1,3 +1,4 @@
+@import '../../../styles/mixin.scss';
 .stacks {
   width: 100vw;
   height: 100vh;
@@ -33,63 +34,78 @@
 
   .stacksContentsBox {
     display: flex;
+    @include mobile {
+      font-size: 0.8rem;
+    }
+    @include tablet {
+      font-size: 1.2rem;
+    }
+    @include desktop {
+      font-size: 1.5rem;
+    }
+    @include huge {
+      font-size: 1.5rem;
+    }
+
     .javaScriptBox {
       width: 20%;
       display: flex;
       justify-content: center;
-      font-size: 1.5rem;
     }
     .reactBox {
       width: 20%;
       display: flex;
       justify-content: center;
-      font-size: 1.5rem;
     }
     .htmlBox {
       width: 20%;
       display: flex;
       justify-content: center;
-      font-size: 1.5rem;
     }
     .gitBox {
       width: 20%;
       display: flex;
       justify-content: center;
-      font-size: 1.5rem;
     }
     .taskBox {
       width: 20%;
       display: flex;
       justify-content: center;
-      font-size: 1.5rem;
     }
   }
   .contentsBox {
     display: flex;
+    @include mobile {
+      font-size: 0.8rem;
+    }
+    @include tablet {
+      font-size: 1.2rem;
+    }
+    @include desktop {
+      font-size: 1.5rem;
+    }
+    @include huge {
+      font-size: 1.5rem;
+    }
     .javaScriptContentsBox {
       width: 20vw;
       text-align: center;
-      font-size: 1.5rem;
     }
     .reactContentsBox {
       width: 20vw;
       text-align: center;
-      font-size: 1.5rem;
     }
     .htmlContentsBox {
       width: 20vw;
       text-align: center;
-      font-size: 1.5rem;
     }
     .gitContentsBox {
       width: 20vw;
       text-align: center;
-      font-size: 1.5rem;
     }
     .taskToolBox {
       width: 20vw;
       text-align: center;
-      font-size: 1.5rem;
     }
   }
 }
