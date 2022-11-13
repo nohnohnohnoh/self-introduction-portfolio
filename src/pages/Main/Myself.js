@@ -1,10 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './MainStyles/Myself.scss'
 import { TypeAnimation } from 'react-type-animation'
 
 const MySelf = () => {
-  const [typing, setTyping] = useState()
-
   return (
     <div className="mySelf">
       <div className="typingContent">
