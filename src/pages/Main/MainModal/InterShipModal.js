@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import '../MainModal/InterShipModal.scss'
 
-const InterShipModal = ({ handleModal, offInterShipModal }) => {
+const InterShipModal = ({ handleModal, onInterShipModal, interShip }) => {
   return (
-    <div className="modal">
-      <div className={handleModal ? 'modalOpen' : 'modalClose'}>
+    <div onClick={onInterShipModal} className="modal">
+      <div
+        className={handleModal ? 'modalOpen' : 'modalClose'}
+        onClick={(event) => event.stopPropagation()}
+      >
         <section>
-          <div className="offClick" onClick={offInterShipModal}>
+          <div className="offClick" onClick={onInterShipModal}>
             X
           </div>
           <header className="modalHeader">InterShip</header>
@@ -24,6 +27,7 @@ const InterShipModal = ({ handleModal, offInterShipModal }) => {
             </div>
           </div>
           <hr />
+          <header className="listOneHeader">InterShip 업무 내용</header>
           <ul className="listOne">
             <li>
               sass, 변수통일에 대한 리팩토링 과 sass mixin을 통한 반응형 웹

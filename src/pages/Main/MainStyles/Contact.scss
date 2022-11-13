@@ -8,6 +8,12 @@
     display: flex;
     align-items: center;
     .contactContent {
+      font-size: 1.5rem;
+      line-height: 2;
+      a {
+        text-decoration: none;
+        color: black;
+      }
     }
   }
 }

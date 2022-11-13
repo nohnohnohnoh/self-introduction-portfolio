@@ -2,11 +2,10 @@ import React, { useState } from 'react'
 import './MainStyles/Project.scss'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Pagination } from 'swiper'
-import 'swiper/swiper.scss'
 import 'swiper/components/navigation/navigation.scss'
 import 'swiper/components/pagination/pagination.scss'
-import Fruits from './Fruits'
-import GoCloud from './GoCloud'
+import Fruits from './SwiperSlides/Fruits'
+import GoCloud from './SwiperSlides/GoCloud'
 import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs'
 import { AiFillGithub, AiOutlineDesktop } from 'react-icons/ai'
 import { SiNotion } from 'react-icons/si'
@@ -15,7 +14,7 @@ const Project = () => {
   const [githubMouseOn, setGithubMouseOn] = useState(false)
   const [notionMouseOn, setNotionMouseOn] = useState(false)
   const [desktopMouseOn, setDeskTopMouseOn] = useState(false)
-  let menu = ['Fruits', 'GoCloud']
+  const menu = ['Fruits', 'GoCloud']
 
   const githubMouseOver = () => {
     setGithubMouseOn(true)
@@ -72,7 +71,7 @@ const Project = () => {
               >
                 <a href="https://github.com/nohnohnohnoh/TheCreationOfWeb-frontend">
                   <AiFillGithub
-                    className={githubMouseOn ? 'active' : 'github'}
+                    className={githubMouseOn ? 'activeProject' : 'github'}
                   />
                 </a>
                 <div className="activeGitHub">
@@ -85,7 +84,9 @@ const Project = () => {
                 className="notionBox"
               >
                 <a href="https://www.notion.so/dff3b913ac5745208ebf1022ce185703">
-                  <SiNotion className={notionMouseOn ? 'active' : 'notion'} />
+                  <SiNotion
+                    className={notionMouseOn ? 'activeProject' : 'notion'}
+                  />
                   <div className="activeNotion">
                     {notionMouseOn && <div>Notion</div>}
                   </div>
@@ -97,7 +98,7 @@ const Project = () => {
                 className="desktopBox"
               >
                 <AiOutlineDesktop
-                  className={desktopMouseOn ? 'active' : 'desktop'}
+                  className={desktopMouseOn ? 'activeProject' : 'desktop'}
                 />
                 <div className="activeDesktop">
                   {desktopMouseOn && <div>시연 영상</div>}
@@ -115,7 +116,7 @@ const Project = () => {
               >
                 <a href="https://github.com/nohnohnohnoh/GoCloud">
                   <AiFillGithub
-                    className={githubMouseOn ? 'active' : 'github'}
+                    className={githubMouseOn ? 'activeProject' : 'github'}
                   />
                 </a>
                 <div className="activeGitHub">
@@ -128,7 +129,9 @@ const Project = () => {
                 className="notionBox"
               >
                 <a href="https://www.notion.so/dff3b913ac5745208ebf1022ce185703">
-                  <SiNotion className={notionMouseOn ? 'active' : 'notion'} />
+                  <SiNotion
+                    className={notionMouseOn ? 'activeProject' : 'notion'}
+                  />
                   <div className="activeNotion">
                     {notionMouseOn && <div>Notion</div>}
                   </div>
@@ -140,7 +143,7 @@ const Project = () => {
                 className="desktopBox"
               >
                 <AiOutlineDesktop
-                  className={desktopMouseOn ? 'active' : 'desktop'}
+                  className={desktopMouseOn ? 'activeProject' : 'desktop'}
                 />
                 <div className="activeDesktop">
                   {desktopMouseOn && <div>시연 영상</div>}

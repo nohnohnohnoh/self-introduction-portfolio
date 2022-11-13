@@ -6,86 +6,90 @@
   align-items: center;
   flex-direction: column;
   .stacksBox {
-    width: 60%;
-    height: 50%;
-    border-left: 3px solid black;
-    .stacksBoxone {
-      height: 50%;
-      margin-left: 5%;
-      .technologyStackHeader {
-        font-size: 2rem;
-        font-weight: 700;
-        margin: 1rem 0;
-      }
-      .technologyStack {
-        display: flex;
-        flex-wrap: wrap;
-      }
-      .technologyStackBox {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin: 0 4% 0 4%;
-        .htmlLogo {
-          font-size: 3rem;
-          color: red;
-        }
-        .cssLogo {
-          font-size: 3rem;
-          color: blue;
-        }
-        .styledLogo {
-          font-size: 3rem;
-          color: pink;
-        }
-        .reactLogo {
-          font-size: 3rem;
-          color: skyblue;
-        }
-        .javaScriptLogo {
-          font-size: 3rem;
-          color: green;
-        }
-        .typeScriptLogo {
-          font-size: 3rem;
-          color: lightblue;
-        }
-        .text {
-        }
-      }
+    .stacksHeader {
+      font-size: 3rem;
+      text-align: center;
     }
-    .stacksBoxTwo {
-      height: 50%;
-      margin-left: 5%;
-      .taskToolHeader {
-        font-size: 2rem;
-        font-weight: 700;
-        margin: 1rem 0;
-      }
-      .taskTool {
-        display: flex;
-        flex-wrap: wrap;
-        .taskToolBox {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          margin: 0 4% 0 4%;
-          .notionLogo {
-            font-size: 3rem;
-          }
-          .githubLogo {
-            font-size: 3rem;
-          }
-          .gitLogo {
-            font-size: 3rem;
-          }
-          .slackLogo {
-            font-size: 3rem;
-          }
-        }
-      }
+  }
+  .secondLine {
+    width: 80%;
+    border: 2px solid black;
+  }
+  .lineBoxOne {
+    hr {
+      width: 0px;
+      height: 5vh;
+      border: 2px solid black;
+    }
+  }
+  .lineBoxTwo {
+    display: flex;
+    hr {
+      width: 0px;
+      height: 10vh;
+      border: 2px solid black;
+    }
+  }
+
+  .stacksContentsBox {
+    display: flex;
+    .javaScriptBox {
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+    .reactBox {
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+    .htmlBox {
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+    .gitBox {
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+    .taskBox {
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+  }
+  .contentsBox {
+    display: flex;
+    .javaScriptContentsBox {
+      width: 20vw;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    .reactContentsBox {
+      width: 20vw;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    .htmlContentsBox {
+      width: 20vw;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    .gitContentsBox {
+      width: 20vw;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    .taskToolBox {
+      width: 20vw;
+      text-align: center;
+      font-size: 1.5rem;
     }
   }
 }

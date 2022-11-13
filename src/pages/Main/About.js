@@ -1,46 +1,86 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import './MainStyles/About.scss'
-import InterShipModal from './MainModal/InterShipModal'
+import Wecode from './SwiperSlides/Wecode'
+import InterShip from './SwiperSlides/InterShip'
+import InterShipModal from '../Main/MainModal/InterShipModal'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import SwiperCore, { Navigation, Pagination } from 'swiper'
+import 'swiper/swiper.scss'
+import 'swiper/components/navigation/navigation.scss'
+import 'swiper/components/pagination/pagination.scss'
+import { BiDetail } from 'react-icons/bi'
+import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs'
 
 const About = () => {
   const [handleModal, setHandleModal] = useState(false)
+  const [detailMouseOn, setDetailMouseOn] = useState(false)
+  const interShip = useRef()
 
   const onInterShipModal = () => {
-    setHandleModal(true)
-    console.log(handleModal)
+    setHandleModal(!handleModal)
   }
 
   const offInterShipModal = () => {
     setHandleModal(false)
-    console.log(handleModal)
   }
+
+  const detailMouseOver = () => {
+    setDetailMouseOn(true)
+  }
+
+  const deatilMouseLeave = () => {
+    setDetailMouseOn(false)
+  }
+
+  SwiperCore.use([Navigation, Pagination])
 
   return (
     <div className="about">
-      {/* <div className="aboutHead">
-        <div className="aboutHeadLogo">04. About</div>
-        <div className="aboutHeadText">Wecode bootCamp 수료 했습니다.</div>
-        <div className="aboutHeadText">
-          머치스퀘어 회사에 InterShip 경험이 있습니다.
-        </div>
+      <div className="center">
+        <Swiper
+          className="swiper"
+          slidesPerView={1}
+          navigation={{
+            prevEl: '.prev',
+            nextEl: '.next',
+          }}
+          // pagination={{
+          //   // el: '.swiper-pagination',
+          //   clickable: true,
+          // }}
+        >
+          <SwiperSlide>
+            <Wecode />
+          </SwiperSlide>
+          <SwiperSlide>
+            <InterShip />
+            <div className="link">
+              <div
+                onMouseOver={detailMouseOver}
+                onMouseLeave={deatilMouseLeave}
+                onClick={onInterShipModal}
+                className="detailBox"
+              >
+                <BiDetail
+                  className={detailMouseOn ? 'activeDetail' : 'detailLogo'}
+                />
+                <div className="activeText">
+                  {detailMouseOn && <div>상세내용</div>}
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+        <BsArrowLeftCircle className="prev" />
+        <BsArrowRightCircle className="next" />
       </div>
-      <div className="aboutBox">
-        <div className="wecodeBox">
-          <img className="wecodeImg" src="/images/wecode.png" />
-          <div>Wecode Bootcaomp 수료</div>
-        </div>
-        <div className="interShipBox">
-          <img className="interShipImg" src="/images/머치스퀘어.png" />
-          <div>InterShip</div>
-          <div onClick={onInterShipModal}>자세히 보기</div>
-        </div>
-      </div>
-      {handleModal && (
+      {handleModal ? (
         <InterShipModal
           handleModal={handleModal}
-          offInterShipModal={offInterShipModal}
+          onInterShipModal={onInterShipModal}
+          interShip={interShip}
         />
-      )} */}
+      ) : null}
     </div>
   )
 }

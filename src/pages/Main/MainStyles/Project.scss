@@ -65,7 +65,7 @@
   }
   .wrap {
     transition: 1.5s;
-    transform-style: preserve-3d; //카드 뒤집기 핵심
+    transform-style: preserve-3d;
   }
   .card {
     &:hover {
@@ -202,6 +202,7 @@
     .githubBox {
       width: 35%;
       height: 90%;
+
       .github {
         width: 100%;
         height: 100%;
@@ -210,6 +211,7 @@
     .notionBox {
       width: 30%;
       height: 80%;
+
       .notion {
         width: 100%;
         height: 100%;
@@ -218,13 +220,14 @@
     .desktopBox {
       width: 35%;
       height: 90%;
+
       .desktop {
         width: 100%;
         height: 100%;
       }
     }
 
-    .active {
+    .activeProject {
       width: 100%;
       height: 60%;
       color: skyblue;
@@ -248,7 +251,4 @@
       color: skyblue;
     }
   }
-  // a:link {
-  //   text-decoration: none;
-  // }
 }
