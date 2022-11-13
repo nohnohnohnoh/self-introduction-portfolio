@@ -13,7 +13,6 @@ import { SiNotion } from 'react-icons/si'
 const Project = () => {
   const [githubMouseOn, setGithubMouseOn] = useState(false)
   const [notionMouseOn, setNotionMouseOn] = useState(false)
-  const [desktopMouseOn, setDeskTopMouseOn] = useState(false)
   const menu = ['Fruits', 'GoCloud']
 
   const githubMouseOver = () => {
@@ -30,14 +29,6 @@ const Project = () => {
 
   const notionMouseLeave = () => {
     setNotionMouseOn(false)
-  }
-
-  const desktopMouseOver = () => {
-    setDeskTopMouseOn(true)
-  }
-
-  const desktopMouseLeave = () => {
-    setDeskTopMouseOn(false)
   }
 
   SwiperCore.use([Navigation, Pagination])
@@ -92,18 +83,6 @@ const Project = () => {
                   </div>
                 </a>
               </div>
-              <div
-                onMouseOver={desktopMouseOver}
-                onMouseLeave={desktopMouseLeave}
-                className="desktopBox"
-              >
-                <AiOutlineDesktop
-                  className={desktopMouseOn ? 'activeProject' : 'desktop'}
-                />
-                <div className="activeDesktop">
-                  {desktopMouseOn && <div>시연 영상</div>}
-                </div>
-              </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -136,18 +115,6 @@ const Project = () => {
                     {notionMouseOn && <div>Notion</div>}
                   </div>
                 </a>
-              </div>
-              <div
-                onMouseOver={desktopMouseOver}
-                onMouseLeave={desktopMouseLeave}
-                className="desktopBox"
-              >
-                <AiOutlineDesktop
-                  className={desktopMouseOn ? 'activeProject' : 'desktop'}
-                />
-                <div className="activeDesktop">
-                  {desktopMouseOn && <div>시연 영상</div>}
-                </div>
               </div>
             </div>
           </SwiperSlide>

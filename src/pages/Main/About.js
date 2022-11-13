@@ -44,10 +44,6 @@ const About = () => {
             prevEl: '.prev',
             nextEl: '.next',
           }}
-          // pagination={{
-          //   // el: '.swiper-pagination',
-          //   clickable: true,
-          // }}
         >
           <SwiperSlide>
             <Wecode />
