@@ -1,3 +1,4 @@
+@import '../../../styles/mixin.scss';
 @font-face {
   font-family: 'GangwonEduPowerExtraBoldA';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff')
@@ -25,7 +26,21 @@
     z-index: 100;
 
     .mainNavContents {
-      padding: 0 20px 0 20px;
+      padding: 0 5% 0 5%;
+      @include mobile {
+        font-size: 0.6rem;
+      }
+      @include tablet {
+        font-size: 0.8rem;
+      }
+      @include desktop {
+        padding: 0 4% 0 4%;
+        font-size: 1rem;
+      }
+      @include huge {
+        padding: 0 4% 0 4%;
+        font-size: 1.3rem;
+      }
       .test {
         color: black;
       }
